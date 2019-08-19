@@ -1,0 +1,769 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*--- END Of RESET & Start of CSS ---*/
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background: white;
+    font-family: "Avenir Next", "Avenir", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: black;
+}
+
+a:active {
+    color: black;
+}
+
+
+/*--- Start of Navigator ---*/
+
+/*--- Hamburger menu source: https://codepen.io/erikterwan/pen/EVzeRP ---*/
+
+.navigation {
+    z-index: 3;
+}
+#menuToggle {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 50px;
+    padding-left: 35%;
+    padding-right: 7%;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#menuToggle input {
+    display: flex;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 4;
+    -webkit-touch-callout: none;
+}
+
+#menuToggle span {
+    z-index: 3;
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #cdcdcd;
+    border-radius: 3px;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+    transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+
+#menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+.menu-context {
+    height: 100vh;
+    position: fixed;
+    width: 100%;
+    margin: -100px 0 0 -100%;
+    padding: 50px;
+    padding-right: 60px;
+    padding-top: 200px;
+    background-color: white;
+    background-image: linear-gradient(white, #939FCF);
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    transform: translate(100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+.menu-context > ul > li > a {
+    color: black;
+    padding: 0.5em 1em;
+}
+
+
+.menu-context > ul > li > a:hover {
+    background-color: #B7BEDC;
+    border-radius: 15px;
+}
+
+/* BEAN animation */
+
+#coffee-bean1 {
+    display: none;
+}
+
+#coffee-bean-a1:hover > #coffee-bean1 {
+    display: block;
+    position: relative;
+    margin-top: -1.4em;
+    left: 66%;
+}
+
+#coffee-bean2 {
+    display: none;
+}
+
+#coffee-bean-a2:hover > #coffee-bean2 {
+    display: block;
+    position: relative;
+    margin-top: -1.4em;
+    left: 69%;
+}
+
+#coffee-bean3 {
+    display: none;
+}
+
+#coffee-bean-a3:hover > #coffee-bean3 {
+    display: block;
+    position: relative;
+    margin-top: -1.4em;
+    left: 82%;
+}
+
+#coffee-bean4 {
+    display: none;
+}
+
+#coffee-bean-a4:hover > #coffee-bean4 {
+    display: block;
+    position: relative;
+    margin-top: -1.4em;
+    left: 70%;
+}
+
+#coffee-bean5 {
+    display: none;
+}
+
+#coffee-bean-a5:hover > #coffee-bean5 {
+    display: block;
+    position: relative;
+    margin-top: -1.4em;
+    left: 73%;
+}
+
+/*END BEAN ANimation */
+
+header > nav {
+    position: fixed;
+    right: 15%;
+}
+
+.menu-context > ul > a:hover {
+    background-color: #B7BEDC;
+}
+
+#spot-bottom {
+    position: absolute;
+    top: 45%;
+    left: 10%;
+}
+
+#spot-top {
+    position: absolute;
+    bottom: 60%;
+    right: 4%;
+}
+
+.menu-context > img {
+    max-width: 35%;
+}
+
+.menu-context > ul > li {
+    padding: 20px 0;
+    font-size: 28px;
+}
+
+
+#menuToggle input:checked ~ .menu-context {
+    transform: none;
+}
+
+
+#navigator-desktop {
+    display: none;
+    visibility: hidden;
+}
+
+
+
+#navigator img {
+    max-width: 30%;
+}
+
+header {
+    text-align: center;
+    display: flex;
+    background-image: url(../images/header.png);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    width: 100%;
+    background-size: contain;
+    font-family: 'Yu Gothic';
+}
+
+header > a > img {
+    max-width: 70%;
+}
+
+.logo {
+    width: 40%;
+    margin-left: 7%;
+    margin-right: 48%
+}
+
+.frame {
+    margin-top: 3em;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 4.2em;
+    ;
+}
+
+.frame > h3 {
+    font-family: 'Elevate PERSONAL USE ONLY';
+    font-size: 175%;
+    text-align: center;
+    color: #1D0C04;
+}
+
+.frame > img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.frame > a {
+    text-decoration: none;
+}
+
+.instant_text {
+    text-align: center;
+    word-spacing: 6px;
+    letter-spacing: 6px;
+    padding: 30px;
+    font-family: 'Yu Gothic';
+    font-size: 20px;
+}
+
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box1 {
+    margin-top: 15px;
+    text-align: center;
+    font-family: 'Ebrima';
+    color: black;
+    font-size: 20px;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+.box1 > img {
+    width: 40%;
+    text-align: center;
+}
+
+.box1 > button > a > img {
+    width: 90%;
+}
+.box1:hover {
+    box-shadow: 3px 5px 5px #C2C1C1;
+}
+.box2 {
+    margin-top: 20px;
+    margin-bottom: 2em;
+    text-align: center;
+    font-family: 'Ebrima';
+    color: black;
+    font-size: 20px;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+.box2 > img {
+    width: 40%;
+    text-align: center;
+}
+
+.box2 > button > a > img {
+    width: 90%;
+}
+.box2:hover {
+    box-shadow: 3px 5px 5px #C2C1C1;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.intenso > img {
+    width: 40%;
+}
+
+.intenso > h4 {
+    text-align: center;
+    font-family: 'Yu Gothic';
+    padding-top: 20px;
+    font-size: 20px;
+
+}
+
+.intenso > p {
+    text-align: center;
+    margin: 0 4em;
+}
+
+.classico > img {
+    width: 40%;
+}
+
+.classico > h4 {
+    text-align: center;
+    font-family: 'Yu Gothic';
+    padding-top: 20px;
+    font-size: 20px;
+
+}
+
+.classico > p {
+    text-align: center;
+    margin: 0 4em;
+}
+.intenso > a {
+    background-color: #E9E7AB;
+    border: none;
+    color: #694119;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 5px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.classico > a {
+    background-color: #C7C5CB;
+    border: none;
+    color: #694119;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 5px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+table {
+    border-collapse: collapse;
+    margin: 2em 4em;
+    z-index: -1;
+    margin-left: 15%;
+}
+
+table,
+td,
+th {
+    border: 1px solid black;
+    text-align: center;
+    position: relative;
+    padding: 1em;
+}
+
+.inprogress {
+    margin: 4em 0;
+}
+
+.insp_text {
+    text-align: center;
+    word-spacing: 6px;
+    letter-spacing: 6px;
+    padding: 30px;
+    font-family: 'Yu Gothic';
+    font-size: 20px;
+    z-index: -1;
+}
+
+.pic1 {
+    position: relative;
+    text-align: center;
+    margin-bottom: 2em;
+}
+.pic1 > a > img {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    width: 80%;
+}
+.pic1, pic2 > a {
+    z-index: 1;
+    display: block;
+}
+.centered {
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: 'Elevate PERSONAL USE ONLY';
+    font-size: 2.3em;
+}
+.pic2 {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-bottom: 2em;
+}
+
+.pic2 > a > img {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    width: 80%;
+}
+.about > h3 {
+    text-align: center;
+    word-spacing: 6px;
+    letter-spacing: 6px;
+    padding: 30px;
+    font-family: 'Yu Gothic';
+    font-size: 20px;
+}
+.cup {
+    position: relative;
+}
+.text {
+    position: absolute;
+    top: 0;
+    margin-top: 67%;
+    width: 70%;
+    margin-left: 4%;
+}
+footer {
+    text-align: center;
+    display: flex;
+    background-image: url(../images/footer.png);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    width: 100%;
+    background-size: cover;
+}
+
+.social > a > img {
+    width: 15%;
+    padding-top: 2.5em;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .social {
+        justify-content: space-around;
+    }
+
+    .social > a {
+        margin-bottom: 0;
+    }
+
+    table {
+        margin-left: 20%;
+    }
+    .text {
+        width: 70%;
+        margin-left: 5%;
+    }
+    .photos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        
+    }
+    .pic1 {
+        width: 50%;
+    }
+    .pic2 {
+        width: 50%;
+    }
+        
+}
+
+@media only screen and (min-width: 1024px) {
+
+    body {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    #navigator-desktop {
+        width: 60%;
+        display: flex;
+        visibility: visible;
+        position: absolute;
+        right: 0;
+        top: 2em;
+        justify-content: flex-end;
+        
+    }
+
+    #navigator-list-desktop {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #182C54;
+        display: flex;
+        justify-content: flex-end;
+        font-family: 'Yu Gothic';
+    }
+
+    #navigator-list-desktop li a {
+        display: flex;
+        color: white;
+        text-align: right;
+        padding: 10px 16px;
+        text-decoration: none;
+    }
+
+    #navigator-list-desktop li a:hover {
+        background-color: #63849A;
+    }
+
+    header {
+        background-image: url(../images/header_pc.png);
+        width: 100%;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        width: 100%;
+        background-size: cover;
+    }
+
+    header > a > img {
+        display: none;
+    }
+
+    .logo {
+        display: flex;
+        width: 15%;
+        position: relative;
+        top: 0.5em;
+        padding-bottom: 2em;
+    }
+
+    main {
+        width: 70%;
+    }
+
+    table {
+        margin-left: 15%;
+    }
+    .text {
+        width: 40%;
+        margin-top: 35%;
+        margin-left: 4%;
+    }
+
+    footer {
+        width: 100%;
+        background-image: url(../images/footer_pc.png);
+    }
+
+    .social {
+        width: 100%;
+    }
+    .photos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .pic1 {
+        width: 50%;
+    }
+    .pic2 {
+        width: 50%;
+    }
+
+}
